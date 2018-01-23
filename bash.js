@@ -17,5 +17,5 @@ process.stdin.on('data', function (data) {
 	// } else if (first === 'tail') {
 	// 	commands.tail(remaining);
 	// }
-  // process.stdout.write('\nprompt > ');
+  //process.stdout.write('\nprompt > ');
 });

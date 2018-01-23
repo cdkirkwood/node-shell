@@ -21,8 +21,13 @@ var ls = function(fileName) {
 }
 
 var echo = function(fileName) {
-	process.stdout.write(fileName);
-	process.stdout.write("\nprompt > ");
+	const output = fileName
+	.split(' ')
+	.map(function (arg) {
+		return (arg[0] === '$') ? process.env[arg.slice(1)] : arg;
+	})
+	.join(' ');
+	process.stdout.write(output);
 }
 
 var cat = function(fileName) {
